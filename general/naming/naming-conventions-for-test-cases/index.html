@@ -6,18 +6,20 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- Begin Jekyll SEO tag v2.5.0 -->
-<title>Feeling Lost | UI Testing Academy</title>
+<title>Naming conventions for test cases | UI Testing Academy</title>
 <meta name="generator" content="Jekyll v3.8.5" />
-<meta property="og:title" content="Feeling Lost" />
-<meta name="author" content="Alex Zhukovich" />
+<meta property="og:title" content="Naming conventions for test cases" />
+<meta name="author" content="alex_zhukovich" />
 <meta property="og:locale" content="en" />
-<meta name="description" content="UI Testing related content" />
-<meta property="og:description" content="UI Testing related content" />
-<link rel="canonical" href="https://ui-testing.academy/404.html" />
-<meta property="og:url" content="https://ui-testing.academy/404.html" />
+<meta name="description" content="We will explore different naming conventions for test cases." />
+<meta property="og:description" content="We will explore different naming conventions for test cases." />
+<link rel="canonical" href="https://ui-testing.academy/general/naming/naming-conventions-for-test-cases/" />
+<meta property="og:url" content="https://ui-testing.academy/general/naming/naming-conventions-for-test-cases/" />
 <meta property="og:site_name" content="UI Testing Academy" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2020-09-06T00:00:00+00:00" />
 <script type="application/ld+json">
-{"headline":"Feeling Lost","description":"UI Testing related content","@type":"WebPage","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ui-testing.academy/logo.svg"},"name":"Alex Zhukovich"},"author":{"@type":"Person","name":"Alex Zhukovich"},"url":"https://ui-testing.academy/404.html","@context":"http://schema.org"}</script>
+{"headline":"Naming conventions for test cases","description":"We will explore different naming conventions for test cases.","dateModified":"2020-09-06T00:00:00+00:00","datePublished":"2020-09-06T00:00:00+00:00","mainEntityOfPage":{"@type":"WebPage","@id":"https://ui-testing.academy/general/naming/naming-conventions-for-test-cases/"},"@type":"BlogPosting","publisher":{"@type":"Organization","logo":{"@type":"ImageObject","url":"https://ui-testing.academy/logo.svg"},"name":"alex_zhukovich"},"author":{"@type":"Person","name":"alex_zhukovich"},"url":"https://ui-testing.academy/general/naming/naming-conventions-for-test-cases/","@context":"http://schema.org"}</script>
 <!-- End Jekyll SEO tag -->
 
   <meta property="og:image" content="https://ui-testing.academy/uploads/logo.svg"/>
@@ -224,24 +226,197 @@ function searchResults(form) {
   </div>
 </header>
 
-    
-<div class="uk-section uk-section-muted">
+    <div class="uk-section uk-section-muted">
   <div class="uk-container">
+    
+      
+        
+      
+        
+          <ul class="uk-breadcrumb">
+            <li><a href="/">Home</a></li>
+            
+              <li><a href="/#general">General information</a></li>
+            
+            
+            
+            
+            <li><a href="/general/naming/">Naming</a></li>
+          </ul>
+          
+    
     <div class="uk-background-default uk-border-rounded uk-box-shadow-small">
       <div class="uk-container uk-container-xsmall uk-padding-large">
         <article class="uk-article">
-          <h1 class="uk-article-title">Feeling Lost</h1>
-          <div class="uk-article-content">
-            <h2 id="the-page-you-are-looking-for-cannot-be-found-please-navigate-to-homepage">The page you are looking for cannot be found. Please navigate to <a href="https://ui-testing.academy">homepage</a>.</h2>
+          <h1 class="uk-article-title">Naming conventions for test cases</h1>
+          <div class="uk-article-meta uk-margin uk-flex uk-flex-middle">
+            
 
+
+  
+  <img class="uk-border-circle uk-avatar-small" data-src="https://ui-testing.academy/uploads/avatar/alex_zhukovich.png" src="https://ui-testing.academy/uploads/avatar/alex_zhukovich.png" alt="Alex Zhukovich" data-uk-img>
+
+
+<div>
+  
+    Written by Alex Zhukovich<br>
+  
+  <time datetime="2020-09-06T00:00:00+00:00">
+    
+    Sep 6, 2020
+  </time>
+</div>
           </div>
+          
+          <div class="uk-article-content">
+            <p>A name is an essential part of a test suite and each test scenario. When analyzing test reports, all you see are the names of the test cases. The right name of the test case provides information about the scenario, and often, it’s enough information for understanding the main idea.</p>
+
+<p>Many naming conventions can be applied to test cases.</p>
+
+<p>Note: Some runtime environments allow you to use space <code class="language-plaintext highlighter-rouge">" "</code> as a separator inside test names; in other cases, one of the most popular options is <code class="language-plaintext highlighter-rouge">"_"</code>. Example:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>should_showInvalidAuthenticationMessage_when_passwordIsInvalid
+// or
+should show authentication message when password is invalid
+</code></pre></div></div>
+
+<p>Most used naming conventions for test cases:</p>
+<h2 id="feature-which-will-be-tested">Feature which will be tested</h2>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">success_to_paid_for_order</span>
+
+<span class="n">fail_to_login_if_account_is_invalid</span>
+
+<span class="n">fail_to_apply_invalid_voucher</span>
+</code></pre></div></div>
+<h2 id="action-state-under-test-expected-behavior">[Action] [State under test] [Expected behavior]</h2>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pay_validAccount_openSuccessScreen</span>
+
+<span class="n">login_invalidAccount_showInvalidUserMessage</span>
+
+<span class="n">addVoucher_invalidVoucher_showInvalidVoucherMessage</span>
+</code></pre></div></div>
+<h2 id="action-expected-behavior-state-under-test">[Action] [Expected behavior] [State under test]</h2>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">pay_openSuccessScreen_when_AccountIsValid</span>
+
+<span class="n">login_showInvalidUserMessage_when_AccountIsInvalid</span>
+
+<span class="n">addVoucher_showInvalidVoucherMessage_when_VoucherIsInvalid</span>
+</code></pre></div></div>
+<h2 id="should-expected-behavior-when-state-under-test">Should [Expected behavior] When [State under test]</h2>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">should_openSuccessScreen_when_userPayWithValidAccount</span>
+
+<span class="n">should_showInvalidUserMessage_when_loginWithInvalidAccount</span>
+
+<span class="n">should_showInvalidVoucherMessage_when_userAddInvalidVoucher</span>
+</code></pre></div></div>
+<h2 id="given-preconditions-when-state-under-test-then-expected-behavior">Given [Preconditions] When [State under test] Then [Expected behavior]</h2>
+<div class="language-kotlin highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">given_userIsAuthenticated_when_accountNumberIsValidToPay_then_openSuccessScreen</span>
+
+<span class="n">given_userIsNotAuthenticated_when_invalidAccountToLogin_then_showInvalidVoucherMessage</span>
+
+<span class="n">given_userIsAuthenticated_when_addInvalidVoucher_then_showInvalidVoucherMessage</span>
+</code></pre></div></div>
+
+            
+              <div class="share uk-text-center uk-margin-large-top">
+    
+        <a class="uk-link-muted" href="https://twitter.com/intent/tweet?text=Naming+conventions+for+test+cases&url=https://ui-testing.academy/general/naming/naming-conventions-for-test-cases/&via=ui_test_academy&related=ui_test_academy" rel="nofollow" target="_blank" title="Share on Twitter" onclick="window.open(this.href, 'twitter', 'width=550,height=235');return false;"><span data-uk-icon="icon: twitter; ratio: 1.2"></span></a>
+    
+    
+        <a class="uk-link-muted uk-margin-small-left" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fui-testing.academy%2Fgeneral%2Fnaming%2Fnaming-conventions-for-test-cases%2F" rel="nofollow" target="_blank" title="Share on Facebook" onclick="window.open(this.href, 'facebook-share','width=580,height=296');return false;"><span data-uk-icon="icon: facebook; ratio: 1.2"></span></a>
+    
+</div>
+            
+          </div>
+          <div class="uk-margin-large-top">
+  <div class="uk-child-width-expand@s uk-grid-large" data-uk-grid>
+    <div>
+      
+      <h4>Approaches of UI testing</h4>
+      <div><a class="uk-remove-underline hvr-back" 
+        href="/general/ui-testing/approaches-of-ui-testing/">&larr; Previous</a>
+      </div>
+      
+    </div>
+    <div class="uk-text-right">
+      
+      <h4>Separate your tests from the test automation framework</h4>
+      <div class="uk-text-right"><a class="uk-remove-underline hvr-forward"
+        href="/general/good-practices/separate-your-tests-from-the-test-automation-framework/">Next &rarr;</a>
+      </div>
+      
+    </div>
+  </div>
+</div>
+          <div class="uk-margin-large-top">
+    <h4>Related Posts</h4>
+
+    
+    
+    
+
+    <ul class="uk-list">
+    
+
+        
+        
+
+        
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+
+    
+
+        
+        
+
+        
+
+        
+
+    
+    </ul>
+</div>
+
+          
         </article>
+        <script>
+          // Table of contents scroll to
+          UIkit.scroll('#markdown-toc a', {
+            duration: 400,
+            offset: 40
+          });
+        </script>
       </div>
     </div>
   </div>
 </div>
-
-
 
 
     <div id="offcanvas-posts" data-uk-offcanvas="overlay: true">
@@ -255,7 +430,7 @@ function searchResults(form) {
         
           <li class=""><a href="/general/ui-testing/">UI testing</a></li>
         
-          <li class=""><a href="/general/naming/">Naming</a></li>
+          <li class="uk-active"><a href="/general/naming/">Naming</a></li>
         
           <li class=""><a href="/general/good-practices/">Good Practices</a></li>
         
